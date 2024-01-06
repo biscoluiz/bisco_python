@@ -7,9 +7,13 @@ leap_f = year % 4
 leap_s = year % 100
 leap_t = year % 400
 
-if leap_f == 0 and leap_t == 0 and leap_t == 0:
-  print("Leap year")
-elif leap_f == 0 and leap_s != 0:
-  print("Leap year")
+if leap_f == 0:
+  if leap_s == 0:
+    if leap_t == 0:
+      print("Leap year")
+    else:
+      print("Not leap year")
+  else:
+      print("Leap year")
 else:
-    print("Not leap year")
+  print("Not leap year")
